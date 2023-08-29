@@ -23,6 +23,7 @@
             <!-- Loop through tasks and display them -->
             {% for task in tasks %}
             <div class="task-item">
+                <!-- when a task is updated/completed the text is line through  -->
                 <span class="{{ 'completed-task' if task.completed else '' }}">{{ task.description }}</span>
                 <br/>
                 <div class="task-buttons">
