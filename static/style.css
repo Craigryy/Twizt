@@ -1,102 +1,157 @@
+/* Reset styles */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+/* Global styles */
+body {
     font-family: "Montserrat", sans-serif;
     background: #eee;
-  }
-  
-  .container {
+}
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     padding: 0 16px;
-  }
-  
-  .task-form {
+}
+
+/* Task Form styles */
+.task-form {
     margin-bottom: 20px;
     text-align: center;
-  }
-  
-  .task-form input {
+}
+
+.task-form input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
-  }
-  
-  .task-form button {
+    text-align: center;
+}
+
+.task-form button {
     background-color: #f5ba13;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 8px 15px;
+    border-radius: 50%;
+    padding: 8px;
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .task-form button:hover {
-    background-color: #e69500;
-  }
-  
-  .task-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .task-item {
+    align-items: center;
+}
+
+.task-form button:hover {
+    background-color: #e69500;
+}
+
+/* Task List styles */
+.task-list {
+    background: url("notebook-bg.png") center/cover; /* Replace with your notebook background image */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+.task-item {
     background: #fff;
     border-radius: 7px;
     box-shadow: 0 2px 5px #ccc;
     padding: 10px;
     margin: 10px 0;
-    width: 30; /* Adjust the width here */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .completed-task {
+}
+
+.completed-task {
     text-decoration: line-through;
     color: #aaa;
-  }
-  
-  .task-buttons {
+}
+
+.task-buttons {
     display: flex;
     gap: 10px;
-  }
-  
-  button {
-    background: none;
+    border-radius: 50%;
+}
+
+.update-button {
+    background-color: #dc3545; /* Red color */
+    color: white;
     border: none;
-    cursor: pointer;
+    border-radius: 10%;
+    padding: 4px;
     font-size: 14px;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    border-radius: 50%;
+}
 
-  }
-  
-  button i {
+.delete-button {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5%;
+    padding: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.update-button:hover,
+.delete-button:hover {
+    background-color: #c82333; /* Darker red for update, #0056b3 for darker blue for delete */
+}
+
+button i {
     font-size: 18px;
     color: #f5ba13;
     margin-right: 5px;
     border-radius: 50%;
-  }
-  
-  button:focus {
+}
+
+button:focus {
     outline: none;
-  }
-  
-  button:hover i {
+}
+
+button:hover i {
     color: #e69500;
-  }
-  
+}
+
+/* Input Group styles */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add some space between input group and task list */
+}
+
+.input-group input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    margin-right: 5px; /* Add space between input and button */
+}
+
+.input-group button {
+    background-color: #f5ba13;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 8px 12px; /* Adjust padding for better visual */
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.input-group button:hover {
+    background-color: #e69500;
+}

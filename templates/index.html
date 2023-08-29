@@ -9,12 +9,13 @@
     <div class="container">
         <h1>Task Management</h1>
         <br/>
-        
 
         <!-- Form to add a new task -->
         <form class="task-form" action="/add_task" method="POST">
-            <input type="text" name="task_description" placeholder="Task description" required>
-            <button type="submit"><i class="fas fa-plus"></i> Add Task</button>
+            <div class="input-group">
+                <input type="text" name="task_description" placeholder="Task description" required>
+                <button type="submit" class="add-button"><i class="fas fa-plus"></i> Add</button>
+            </div>
         </form>
 
         <h2>Task List</h2>
@@ -23,13 +24,15 @@
             {% for task in tasks %}
             <div class="task-item">
                 <span class="{{ 'completed-task' if task.completed else '' }}">{{ task.description }}</span>
+                <br/>
                 <div class="task-buttons">
                     <form action="/update_task/{{ task._id }}" method="POST">
-                        <button class="update-button" type="submit"><i class="fas fa-check"></i> Update</button>
+                        <button class="update-button btn btn-success" type="submit"><i class="fas fa-check"></i> Update</button>
                     </form>
                     <form action="/delete_task/{{ task._id }}" method="POST">
-                        <button class="delete-button" type="submit"><i class="fas fa-trash"></i> Delete</button>
+                        <button class="delete-button btn btn-danger" type="submit"><i class="fas fa-trash"></i> Delete</button>
                     </form>
+                  
                 </div>
             </div>
             {% endfor %}
