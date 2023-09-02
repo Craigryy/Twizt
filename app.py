@@ -7,10 +7,11 @@ from bson import ObjectId
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
 # Configure the MongoDB connection URI
-app.config["MONGO_URI"] = "mongodb://localhost:27017/todo"
+app.config["MONGO_URI"] = "mongodb+srv://ADMIN:admin98@cluster0.oqytxlf.mongodb.net/mydb?retryWrites=true&w=majority"
 
 # Create a PyMongo instance using the Flask app
-mongo = PyMongo(app)
+mongo = PyMongo()
+mongo.init_app(app)
 
 # Define a route for the homepage ("/")
 @app.route('/')
