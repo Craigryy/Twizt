@@ -1,17 +1,20 @@
 # Import necessary modules and classes
 from flask import Flask, render_template, request, redirect
-from flask_pymongo import PyMongo
 from bson import ObjectId
+from flask_pymongo import PyMongo
+
 
 # Create a Flask web application instance
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
 # Configure the MongoDB connection URI
-app.config["MONGO_URI"] = "mongodb+srv://ADMIN:admin98@cluster0.oqytxlf.mongodb.net/mydb?retryWrites=true&w=majority"
+app.config["MONGO_URI"] = "mongodb+srv://ADMIN:admin1@cluster0.oqytxlf.mongodb.net/mydb?retryWrites=true&w=majority"
+
 
 # Create a PyMongo instance using the Flask app
 mongo = PyMongo()
 mongo.init_app(app)
+
 
 # Define a route for the homepage ("/")
 @app.route('/')
@@ -50,7 +53,6 @@ def delete_task(task_id):
     mongo.db.tasks.delete_one({'_id': ObjectId(task_id)})
     # Redirect back to the homepage
     return redirect('/')
-
 
 # Run the Flask app only if the script is executed directly
 if __name__ == '__main__':
