@@ -32,8 +32,16 @@ Before you begin using Twizt, make sure you have the following installed on your
 
 Installation
 
-	 git clone https://github.com/Craigryy/twizt.git cd twizt
+	 git clone https://github.com/Craigryy/twizt.git
+  
+  
  Clone the Twist repository to your local machine
+
+ After which change directory 
+
+ ``` console
+  cd twizt
+```
 
 
 
