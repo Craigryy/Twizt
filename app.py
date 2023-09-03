@@ -1,24 +1,21 @@
 from flask import Flask, render_template, request, redirect
 from bson import ObjectId
-from pymongo import MongoClient
-from dotenv import dotenv_values
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 
 # Create a Flask web application instance
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
-# Load environment variables from the .env file
-config = dotenv_values(".env")
+# Configure the MongoDB connection URI
+uri = "mongodb+srv://mongoharry97:admin1@cluster0.upaqi5a.mongodb.net/?retryWrites=true&w=majority"
 
-# Establish a connection to the MongoDB cluster using the URI from .env
-mongodb_uri = config["ATLAS_URI"]
+# # Establish a connection to the MongoDB cluster
+# client = MongoClient(uri)
+# Create a new client and connect to the server
+client = MongoClient(uri, server_api=ServerApi('1'))
 
-try:
-    client = MongoClient(mongodb_uri)
-    # Access a specific database from .env
-    db = client[config["DB_NAME"]]
-    print("Connected to the MongoDB database!")
-except Exception as e:
-    print("Failed to connect to the MongoDB database:", str(e))
+# Access a specific database 
+db = client.mydb
 
 # Define a route for the homepage ("/")
 @app.route('/')
