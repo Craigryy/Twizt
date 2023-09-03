@@ -32,13 +32,13 @@ Before you begin using Twizt, make sure you have the following installed on your
 
 Installation
 
-	1. git clone https://github.com/Craigryy/twizt.git2. cd twizt
+	 git clone https://github.com/Craigryy/twizt.git cd twizt
  Clone the Twist repository to your local machine
 
 
 
 
-	2. pip install -r requirements.txt	
+	 pip install -r requirements.txt	
  
  Install the required Python packages using pip
 
@@ -49,7 +49,7 @@ Installation
 
 Usage
 
-	1. python app.py
+	 python app.py
  
  Start the Flask application
 
