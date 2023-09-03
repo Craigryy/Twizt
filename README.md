@@ -32,26 +32,28 @@ Before you begin using Twizt, make sure you have the following installed on your
 
 Installation
 
-	1.	Clone the Twist repository to your local machine:
-
-git clone https://github.com/Craigryy/twizt.git
-
-
-cd twizt
+	1. git clone https://github.com/Craigryy/twizt.git2. cd twizt
+ Clone the Twist repository to your local machine
 
 
-	2.	Install the required Python packages using pip:
 
-pip install -r requirements.txt
+
+	2. pip install -r requirements.txt	
+ 
+ Install the required Python packages using pip
+
+
 
 
 	3.	Make sure your MongoDB server is running. Update the MongoDB connection settings in the config.py file if needed.
 
 Usage
 
-	1.	Start the Flask application:
+	1. python app.py
+ 
+ Start the Flask application
 
-python app.py
+
 
 
 	2.	Open your web browser and navigate to http://localhost:5000 to access the Twist app.
