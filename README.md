@@ -23,7 +23,7 @@ Twizt is a simple ToDo web application that helps users manage their tasks and k
 
 Prerequisites
 
-Before you begin using Twist, make sure you have the following installed on your system:
+Before you begin using Twizt, make sure you have the following installed on your system:
 
 	•	Python 3.x
 	•	Flask
@@ -35,6 +35,8 @@ Installation
 	1.	Clone the Twist repository to your local machine:
 
 git clone https://github.com/Craigryy/twizt.git
+
+
 cd twizt
 
 
