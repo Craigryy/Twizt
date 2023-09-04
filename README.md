@@ -104,7 +104,7 @@ Now, Twizt is up and running in a Dockerized environment, making it easy to depl
 Twizt Task Management App on Heroku
 
 
-App URL: https://intense-temple-95344-1fd564e3255b.herokuapp.com/
+App URL: https://twizt-f90316beb053.herokuapp.com/
 
 Features:
 
@@ -113,7 +113,8 @@ Features:
 
 Usage:
 
-	•	Users can access your app by visiting the provided Heroku URL https://intense-temple-95344-1fd564e3255b.herokuapp.com.
+	•	Users can access your app by visiting the provided Heroku 
+
 	•	They can start managing their tasks, benefiting from the task management features your app provides.
 
 This deployment on Heroku makes your Twist app accessible to a wider audience, and users can conveniently use it without having to set up any infrastructure locally. It’s a great way to showcase your app to the world!
